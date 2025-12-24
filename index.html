@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <!-- Link favicon -->
+     <link rel="shortcut icon" href="./img/favicon.svg">
+
+    <!-- Link CSS file -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Link Google FOnts - Ubuntu -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="parent">
+      <div class="card">
+        <div class="card-left"></div>
+        <div class="card-right">
+          <h1 class="card-right-heading">Weather Application</h1>
+          <p class="card-right-quote">
+            "A window to the sky in your pocket. From blazing sun to whispering snow, we bring the world's weather to you"
+          </p>
+          <div class="card-right-input-parent">
+            <div class="card-right-input-child-pcode">
+              <label for="" class="card-right-input-child-pcode-label"
+                >Postal Code:
+              </label>
+              <input
+                type="number"
+                inputmode="numeric"
+                placeholder="Enter your postal code here..."
+                class="card-right-input-child-pcode-input"
+                id="card-right-input-child-pcode-input"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 6);"
+              />
+            </div>
+            <button class="card-right-input-child-button" id="card-right-input-child-button">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
