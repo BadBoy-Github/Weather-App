@@ -24,11 +24,12 @@
     display: grid;
     grid-template-columns: 60% 40%;
     overflow: hidden;
+    box-shadow: 10px 10px 0px 0px rgb(50, 50, 50);
+    transition-duration: 0.6s;
 }
 
-.card-left {
-    background-color: rgba(255, 0, 0, 0.203);
-    padding: 20px;
+.card:hover {
+    box-shadow: 10px 10px 0px 0px rgb(80, 80, 80);
 }
 
 .card-right {
@@ -101,5 +102,63 @@
 }
 
 .card-right-input-child-button:active {
+    background-color: rgba(32, 32, 32, 0.95);
     transform: scale(0.98);
+}
+
+
+.card-left {
+    padding: 20px;
+}
+
+.card-left-parent {
+    background-color: white;
+    border: 2px solid rgba(32, 32, 32, 0.2);
+    border-radius: 14px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    overflow: hidden;
+}
+
+.card-left-parent-top {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.card-left-parent-top-left {
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 70% 30%;
+}
+
+.card-left-parent-top-left-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-left-parent-top-left-top-img {
+    height: 80%;
+}
+
+.card-left-parent-top-left-bot {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.card-left-parent-top-left-bot {
+    background-color: rgba(135, 207, 235, 0.515);
+}
+
+.card-left-parent-top-right {
+    background-color: rgba(255, 255, 0, 0.504);
+}
+
+.card-left-parent-bot {
+    background-color: rgba(255, 0, 0, 0.303);
 }

@@ -32,7 +32,10 @@ let fetchWeatherData = async (url) => {
     weatherCode = data.weather.code;
     tempData = data.temp;
     snowData = data.snow;
+
+    
 }
+
 
 
 
