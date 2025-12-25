@@ -6,7 +6,7 @@
     <title>Weather App</title>
 
     <!-- Link favicon -->
-     <link rel="shortcut icon" href="./img/favicon.svg">
+    <link rel="shortcut icon" href="./img/favicon.svg" />
 
     <!-- Link CSS file -->
     <link rel="stylesheet" href="style.css" />
@@ -23,35 +23,69 @@
     <div class="parent">
       <div class="card">
         <div class="card-left">
-            <div class="card-left-parent">
-                <div class="card-left-parent-top">
-                    <div class="card-left-parent-top-left">
-                        <div class="card-left-parent-top-left-top">
-                            <img src="./img/d/200.png" alt="" class="card-left-parent-top-left-top-img">
-                        </div>
-                        <div class="card-left-parent-top-left-bot">
-                            Weather Description
-                        </div>
-                    </div>
-                    <div class="card-left-parent-top-right">
-                        <p>Clouds: </p>
-                        <p>Air Quality: </p>
-                        <p>Humidity: </p>
-                        <p>Wind Speed: </p>
-                        <div class="">D</div>
-                    </div>
+          <div class="card-left-parent">
+            <div class="card-left-parent-top">
+              <div class="card-left-parent-top-left">
+                <div class="card-left-parent-top-left-top">
+                  <img src="./img/sunny.png" alt="" class="card-left-parent-top-left-top-img">
                 </div>
-                <div class="card-left-parent-bot">
-                    <div class="card-left-parent-bot-prep"></div>
-                    <div class="card-left-parent-bot-temp"></div>
-                    <div class="card-left-parent-bot-snow"></div>
+                <div class="card-left-parent-top-left-bot">
+                  <p class="card-left-parent-top-left-bot-para">
+                    Hello fellas! Wanna check out the <span>weather?</span> Enter your postal code on the right side and hit search!
+                  </p>
                 </div>
+              </div>
+              <div class="card-left-parent-top-right">
+                <div class="card-left-parent-top-right-child">
+                  <span class="card-left-parent-top-right-child-label">Clouds:&nbsp;&nbsp;</span>
+                  <span class="card-left-parent-top-right-child-value" id="clouds">-</span>
+                </div>
+                <div class="card-left-parent-top-right-child">
+                  <span class="card-left-parent-top-right-child-label">Air Quality:&nbsp;&nbsp;</span>
+                  <span class="card-left-parent-top-right-child-value" id="airquality">-</span>
+                </div>
+                <div class="card-left-parent-top-right-child">
+                  <span class="card-left-parent-top-right-child-label">Wind Speed:&nbsp;&nbsp;</span>
+                  <span class="card-left-parent-top-right-child-value" id="windspeed"> -</span>
+                </div>
+                <div class="card-left-parent-top-right-child">
+                  <span class="card-left-parent-top-right-child-label">Humidity:&nbsp;&nbsp;</span>
+                  <span class="card-left-parent-top-right-child-value" id="humidity">-</span>
+                </div>
+                <div class="card-left-parent-top-right-child-pod">
+                  <div class="pod-d" id="pod-d">D</div>
+                  <div class="pod-n" id="pod-n">N</div>
+                </div>
+              </div>
             </div>
+            <div class="card-left-parent-bot">
+              <div class="card-left-parent-bot-prep">
+                <img src="./img/drop.png" alt="" class="card-left-parent-bot-img"/>
+                <p class="card-left-parent-bot-para" id="rain">- mm</p>
+                <p class="absolute-para" id="rainpara">-</p>
+              </div>
+              <div class="card-left-parent-bot-temp">
+                <img src="./img/hot.png" alt="" class="card-left-parent-bot-img"/>
+                <p class="card-left-parent-bot-para" id="temp">- °C</p>
+                <p class="absolute-para" id="temppara">-</p>
+              </div>
+              <div class="card-left-parent-bot-snow">
+                <img src="./img/snowflake.png" alt="" class="card-left-parent-bot-img"/>
+                <p class="card-left-parent-bot-para" id="snow">- mm</p>
+                <p class="absolute-para" id="snowpara">-</p>
+              </div>
+              <div class="card-left-parent-bot-weather">
+                <img src="./img/d/200.png" alt="" class="weather-img" id="weatherImg"/>
+                <p class="weather-para" id="weather">-</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="card-right">
           <h1 class="card-right-heading">Weather Application</h1>
           <p class="card-right-quote">
-            "A window to the sky in your pocket. From blazing sun to whispering snow, we bring the world's weather to you"
+            "A window to the sky in your pocket. From blazing sun to whispering
+            snow, we bring the world's weather to you"
           </p>
           <div class="card-right-input-parent">
             <div class="card-right-input-child-pcode">
@@ -67,7 +101,13 @@
                 oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 6);"
               />
             </div>
-            <button class="card-right-input-child-button" id="card-right-input-child-button">Search</button>
+            <div class="city">City:<span id="cityname" class="cityname">&nbsp;&nbsp;-</span></div>
+            <button
+              class="card-right-input-child-button"
+              id="card-right-input-child-button"
+            >
+              Search
+            </button>
           </div>
         </div>
       </div>

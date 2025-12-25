@@ -131,34 +131,202 @@
 .card-left-parent-top-left {
     overflow: hidden;
     display: grid;
-    grid-template-rows: 70% 30%;
+    grid-template-rows: 60% 40%;
+    justify-content: center;
+    justify-items: center;
 }
 
 .card-left-parent-top-left-top {
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
 }
 
 .card-left-parent-top-left-top-img {
-    height: 80%;
+    width: 120px;
+    animation-duration: 3s;
+    animation-name: sun;
+    animation-iteration-count: infinite;
 }
 
+@keyframes sun {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% 
+    {transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
 .card-left-parent-top-left-bot {
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: start;
+    width: 86%;
 }
 
-.card-left-parent-top-left-bot {
-    background-color: rgba(135, 207, 235, 0.515);
+.card-left-parent-top-left-bot-para {
+    color: rgba(32, 32, 32,0.9);
+text-align: center;
+font-size: 16px;
+}
+
+.card-left-parent-top-left-bot-para>span {
+    color: rgb(32, 32, 32);
+    font-weight: 800;
 }
 
 .card-left-parent-top-right {
-    background-color: rgba(255, 255, 0, 0.504);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding-top: 40px;
+    padding-left: 40px;
+    gap: 10px;
+}
+
+.card-left-parent-top-right-child {
+    width: 200px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.card-left-parent-top-right-child-label{
+    font-size: 16px;
+    color: rgba(32, 32, 32, 0.8);
+}
+
+.card-left-parent-top-right-child-value {
+    font-size: 16px;
+    color: rgb(32, 32, 32);
+}
+
+.card-left-parent-top-right-child-pod {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.pod-d {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(231, 231, 0);
+    color: rgb(32, 32, 32);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 40%;
+    font-weight: 700;
+    transition-duration: 0.6s;
+}
+
+.pod-n {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 40%;
+    font-weight: 700;
+    transition-duration: 0.6s;
 }
 
 .card-left-parent-bot {
-    background-color: rgba(255, 0, 0, 0.303);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-left-parent-bot-weather,
+.card-left-parent-bot-prep,
+.card-left-parent-bot-temp,
+.card-left-parent-bot-snow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 100px;
+    border: 2px solid rgba(32, 32, 32, 0.2);
+    border-radius: 12px;
+    position: relative;
+    margin-top: -50px;
+}
+
+.card-left-parent-bot-prep {
+margin-left: 16px;
+}
+
+.card-left-parent-bot-weather {
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border-radius: 12px;
+    margin-top: 0px;
+}
+
+.card-left-parent-bot-img {
+    width: 30px;
+    height: 30px;
+}
+
+.weather-img {
+    width: 84px;
+    height: 84px;
+    margin-top: 10px;
+}
+
+.card-left-parent-bot-para {
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: 400;
+    color: rgb(32, 32, 32);
+}
+
+.weather-para {
+    width: 90%;
+    height: 44px;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.city {
+    color: rgba(32, 32, 32, 0.8);
+    position: absolute;
+    left: 20px;
+    top: 250px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.cityname {
+    font-weight: 700;
+    color: rgb(32, 32, 32);
+}
+
+.absolute-para {
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+    position: absolute;
+    bottom: -40px;
+    text-align: center;
 }
